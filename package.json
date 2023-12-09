@@ -9,6 +9,8 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest --setupFiles dotenv/config",
+    "test:integration": "jest integration --setupFiles dotenv/config",
+    "test:unit": "jest unit",
     "cdk": "cdk"
   },
   "devDependencies": {
