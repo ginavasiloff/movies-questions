@@ -1,5 +1,5 @@
 import { after } from 'node:test'
-import { getMovieApi } from '../lambdas/getMovieApi'
+import { handler } from '../lambdas/getMovieApi'
 
 const originalEnv = process.env
 
@@ -33,7 +33,7 @@ describe('getMovieApi', () => {
       } as Response)
     ) as jest.MockedFunction<typeof fetch>
 
-    await getMovieApi(testUrl)
+    await handler(testUrl)
 
     expect(global.fetch).toHaveBeenCalledWith(testUrl, mockRequest)
   })

@@ -1,4 +1,4 @@
-export const getMovieApi = async (url: string): Promise<JSON> => {
+export const handler = async (url: string): Promise<JSON> => {
   const headers = new Headers({
     Authorization: `Bearer ${process.env.MOVIE_DB_API_ACCESS_TOKEN}`,
     accept: 'application/json'
